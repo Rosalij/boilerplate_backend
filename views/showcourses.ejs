@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 1</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <header>
+        <p id="headertext">Moment 1 Backend</p>
+
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a class="current" href="/">Courses</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="addcourses">Add courses</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h1>Backend-development, mid sweden university</h1>
+            <h2>Rosali Johansson</h2>
+            <p>This website shows your university courses. You can add your own courses on "add courses".</p>
+        </article>
+        <h2>Your courses:</h2>
+
+        <% if (courseList.length> 0) { %>
+            <% courseList.forEach((course)=> { %>
+                <article>
+                    <ul class="courses">
+                        <li>
+                            Coursename: <%= course.name %>
+                        </li><br>
+                        <li>
+                            Coursecode: <%= course.coursecode %>
+                        </li> <br>
+                        <li>
+                            Syllabus: <%= course.syllabus %>
+                        </li><br>
+                        <li>
+                            Progression: <%= course.progression %>
+                        </li>
+                    </ul>
+                </article>
+                <% }); %>
+                    <% } else { %>
+                        <p>No courses saved yet..</p>
+                        <% } %>
+
+
+                            </form>
+    </main>
+    <!--footer-->
+    <footer>
+        <p>Laborationsuppgift för kursen Frontend-baserad utveckling
+        </p>
+        <p>Mittuniversitetet</p>
+        <p>Copyright © 2025 Rosali Johansson</p>
+    </footer>
+</body>
+
+</html>

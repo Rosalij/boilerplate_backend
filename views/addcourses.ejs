@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 1</title>
+  
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <header>
+<p id="headertext">Moment 1 Backend</p>
+
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="/">Courses</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a class="current" href="addcourses">Add courses</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h1>Backend-development, mid sweden university</h1>
+            <h2>Rosali Johansson</h2>
+            <p>Add your course:</p>
+        </article>
+        <form method="post" action="addcourses">
+            <label for="coursename">Course name:</label>
+            <input type="text" id="name" name="coursename">
+          <label for="coursecode">Course code:</label>
+          <input type="text" id="code" name="coursecode">
+          <label for="syllabus">Syllabus:</label>
+          <input type="text" name="syllabus" id="syllabus">
+          <label for="progression">Progression:</label>
+          <input type="text" name="progression" id="progression">
+          <button type="submit" id="submit" value="Save Course">
+        </form>
+
+       </form>
+    </main>
+    <!--footer-->
+    <footer>
+        <p>Laborationsuppgift för kursen Frontend-baserad utveckling
+        </p>
+        <p>Mittuniversitetet</p>
+        <p>Copyright © 2025 Rosali Johansson</p>
+    </footer>
+</body>
+</html>
