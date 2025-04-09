@@ -5,7 +5,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const sqlite3 = require("sqlite3").verbose();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const db = new sqlite3.Database("./db/courses.db");
 
 app.set("view engine", "ejs"); //engine = EJS
