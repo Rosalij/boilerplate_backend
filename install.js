@@ -7,7 +7,7 @@ const db = new sqlite3.Database("./db/courses.db");
 
 //create table (id, coursename, coursecode, syllabus, progression)
 db.serialize(() => {
-    db.run("DROP TABLE IF EXISTS courses;*");
+    db.run("DROP TABLE IF EXISTS courses;");
 
     db.run(`CREATE TABLE courses (
         id INTEGER PRIMARY KEY AUTOINCREMENT,

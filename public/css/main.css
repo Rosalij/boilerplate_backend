@@ -157,7 +157,6 @@ main {
 
 .deletebutton {
     border-radius: 10px;
-    padding: 1em;
     background-color: rgb(255, 255, 255);
 }
 
@@ -170,14 +169,24 @@ main {
     display: block;
     padding: 1em;
     text-align: left;
-    width: 70%;
+    width: 90%;
     font-weight: 500;
     margin-top: 2em;
 }
-
 .courses li {
-    padding: 0.3em;
+   
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
+
+.courses li a {
+    display: flex;
+  padding:0;
+
+}
+
+
 
 #error,
 #saved {
@@ -191,11 +200,14 @@ article p{
 }
 .section {
     margin-bottom: 2em;
+    width: 100%;
+
 }
+
 .section a {
-    padding: 0;
-    font-size: 15px;
+    font-size: smaller;
 }
+
 
 @media all and (max-width: 900px) {
     li a {
@@ -214,8 +226,18 @@ article p{
     form {
         width: 70%;
     }
+    
+.courses li a {
+    display: flex;
+  padding:0em;
+  font-size: 10px;
+}
 
     nav ul {
+        width: 100%;
+    }
+
+     {
         width: 100%;
     }
 }
