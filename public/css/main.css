@@ -213,7 +213,9 @@ article p{
     li a {
         font-size: 12px;
     }
-
+#headertext {
+    font-size: 24px;
+}
     #error,
     #saved {
         margin: auto;
