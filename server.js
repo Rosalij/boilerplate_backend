@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 //routing
-app.get("/index", (req, res) => {
+app.get("/", (req, res) => {
     db.all("SELECT * FROM courses ORDER BY id DESC;", (err, rows) => {
         if (err) {
             console.error(err.message);
@@ -81,7 +81,7 @@ app.get("/delete/:id", (req, res) => {
             console.error(err.message)
         }
         //redirect
-        res.redirect("index");
+        res.redirect("/");
 
     });
 });
