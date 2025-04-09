@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 1</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <header>
+    
+
+        <div class="menu">    <p id="headertext">Moment 1 Backend</p>
+            <nav>
+                <ul>
+                    <li><a href="/">Your courses</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a class="current" href="addcourses">Add courses</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h1>Add your course:</h1>
+        </article>
+        <form method="post" action="addcourses">
+
+            <% if(error != "" ) { %>
+                <p id="error">
+                    <%=error%>
+                </p>
+                <% } %>
+
+                    <% if(saved != "" ) { %>
+                        <p id="saved">
+                            <%=saved%>
+                        </p>
+                        <% } %>
+
+                            <label for="coursename">Course name:</label>
+                            <input type="text" id="coursename" name="coursename">
+                            <label for="coursecode">Course code:</label>
+                            <input type="text" id="coursecode" name="coursecode">
+                            <label for="syllabus">Syllabus:</label>
+                            <input type="text" name="syllabus" id="syllabus">
+                            <label for="progression">Progression:</label>
+                            <input type="text" name="progression" id="progression">
+                            <button type="submit" id="submit">Save course!</button>
+        </form>
+    </main>
+    <!--footer-->
+    <footer>
+        <p>Laborationsuppgift för kursen Backend-baserad utveckling
+        </p>
+        <p>Mittuniversitetet</p>
+        <p>Copyright © 2025 Rosali Johansson</p>
+    </footer>
+</body>
+
+</html>

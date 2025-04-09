@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 1</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <header>
+
+
+        <div class="menu">
+            <p id="headertext">Moment 1 Backend</p>
+            <nav>
+                <ul>
+                    <li><a class="current" href="/">Your courses</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="addcourses">Add courses</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h1>Backend-development, mid sweden university</h1>
+            <p>This website shows your university courses. You can add your own courses on "add courses".</p>
+        </article>
+     
+<h2>Your courses:</h2>
+        <% if (locals.rows.length> 0) { %>
+            <% locals.rows.forEach((course)=> { %>
+                <div class="section">
+                    <ul class="courses">
+ 
+                        <li>
+                            Coursename: <%= course.coursename %>
+                        </li>
+                        <li>
+                            Coursecode: <%= course.coursecode %>
+                        </li> 
+                        <li>
+                            Syllabus: <a href="<%= course.syllabus %>"><%= course.syllabus %></a>
+                        </li>
+                        <li>
+                            Progression: <%= course.progression %>
+                        </li>
+
+                    </ul>
+                   <a class="deletebutton" href="/delete/<%= course.id %>">Delete course</a>
+                </div>
+                <% }); %>
+                    <% } else { %>
+                        <p>No courses saved yet..</p>
+                        <% } %>
+
+
+    </main>
+    <!--footer-->
+    <footer>
+        <p>Laborationsuppgift för kursen Backend-baserad utveckling
+        </p>
+        <p>Mittuniversitetet</p>
+        <p>Copyright © 2025 Rosali Johansson</p>
+    </footer>
+</body>
+
+</html>
