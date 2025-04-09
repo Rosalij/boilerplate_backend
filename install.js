@@ -3,7 +3,7 @@
 const sqlite3 = require("sqlite3").verbose();
 
 //create database Courses
-const db = new sqlite3.Database("db/courses.db");
+const db = new sqlite3.Database("./db/courses.db");
 
 //create table (id, coursename, coursecode, syllabus, progression)
 db.serialize(() => {
