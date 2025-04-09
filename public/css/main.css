@@ -157,7 +157,6 @@ main {
 
 .deletebutton {
     border-radius: 10px;
-    padding: 1em;
     background-color: rgb(255, 255, 255);
 }
 
@@ -174,7 +173,6 @@ main {
     font-weight: 500;
     margin-top: 2em;
 }
-
 .courses li {
    
     display: flex;
@@ -187,6 +185,8 @@ main {
   padding:0;
 
 }
+
+
 
 #error,
 #saved {
@@ -203,10 +203,11 @@ article p{
     width: 100%;
 
 }
+
 .section a {
-padding:1em;
-    font-size: 15px;
+    font-size: smaller;
 }
+
 
 @media all and (max-width: 900px) {
     li a {
